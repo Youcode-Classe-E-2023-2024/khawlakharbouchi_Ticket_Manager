@@ -7,9 +7,9 @@ class Login extends Connection {
         $result = mysqli_query($this->conn, $query);
 
         if ($result && mysqli_num_rows($result) > 0) {
-            return true; // Authentification réussie
+            return true;
         } else {
-            return false; // Échec de l'authentification
+            return false; 
         }
     }
 }
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($login->authenticate($email, $password)) {
 
         header("Location: index.php");
-        exit(); // Assurez-vous de terminer le script après la redirection
+        exit(); 
     } else {
         echo "Login failed. Please check your email and password.";
     

@@ -25,13 +25,13 @@ class Register extends Connection
     {
         $duplicate = mysqli_query($this->conn, "SELECT * FROM developpeur WHERE email = '$email' OR password='$password'");
         if (mysqli_num_rows($duplicate) > 0) {
-            return 0; // يمكنك تعيين رمز للفشل
+            return 0;
         } else {
             $result = mysqli_query($this->conn, "INSERT INTO developpeur (First_name, Last_name, email, password) VALUES ('$f_name', '$l_name', '$email', '$password')");
             if ($result) {
-                return 1; // نجاح التسجيل
+                return 1;
             } else {
-                return -1; // فشل التسجيل
+                return -1;
             }
         }
     }
@@ -61,43 +61,43 @@ class Conn extends Connection
             return false;
         }
     }
-    
+
 
 }
 class Ticket extends Connection
 {
     public function insertFormData($titre, $probleme, $status, $description, $developers, $priorite)
     {
-        // Connexion à la base de données
+
         $conn = $this->conn;
-    
-        // Formatage des développeurs en une chaîne séparée par des virgules
+
+
         $developersString = implode(', ', $developers);
-    
-        // Préparation de la requête
+
+
         $stmt = $conn->prepare("INSERT INTO tickets (titre, probleme, status, description, developpeur, priorite) VALUES (?, ?, ?, ?, ?, ?)");
-    
-        // Vérification de la préparation de la requête
+
+
         if (!$stmt) {
             die("Erreur de préparation de la requête : " . $conn->error);
         }
-    
-        // Liaison des paramètres
+
+
         $stmt->bind_param("sssssi", $titre, $probleme, $status, $description, $developersString, $priorite);
-    
-        // Exécution de la requête
+
+
         if ($stmt->execute()) {
             echo "Données insérées avec succès.";
         } else {
             echo "Erreur lors de l'insertion des données : " . $stmt->error;
         }
-    
-        // Fermeture de la requête
+
+
         $stmt->close();
         header("Location: index.php");
-        exit; 
+        exit;
     }
 }
-        
-        
-        ?>
+
+
+?>

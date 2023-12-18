@@ -4,7 +4,7 @@ include_once 'class.php';
 $connection = new Conn();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupération des données du formulaire
+   
     $titre = $_POST["titre"];
     $probleme = $_POST["probleme"];
     $status = $_POST["status"];
@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $developpeurs = isset($_POST["dev"]) ? $_POST["dev"] : [];
     $priorite = $_POST["number-input"];
 
-    // Création de l'objet Ticket
+   
     $ticket = new Ticket();
 
-    // Appel de la méthode insertFormData
+  
     $ticket->insertFormData($titre, $probleme, $status, $description, $developpeurs, $priorite);
 }
 
@@ -264,7 +264,7 @@ $developers = $connection->selectData("developpeur", "First_name, Last_name");
     <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
     <script>
         new MultiSelectTag('dev')
-        new MultiSelectTag('probleme') // id
+        new MultiSelectTag('probleme') 
     </script>
 </body>
 

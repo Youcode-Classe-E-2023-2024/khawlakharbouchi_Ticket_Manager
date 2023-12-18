@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     if ($result == 1) {
         echo "<script>alert('تم التسجيل بنجاح');</script>";
         header("Location: singIn.php");
-        exit(); // Assurez-vous de terminer le script après la redirection
+        exit(); 
     } else {
         echo "<script>alert('فشل التسجيل، يرجى المحاولة مرة أخرى');</script>";
     }
