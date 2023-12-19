@@ -57,7 +57,7 @@ if ($ticketData) {
         </nav>
         <a href="#" class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">
             <i class="fas fa-arrow-circle-up mr-3"></i>
-            Upgrade to Pro!
+            Khawlita
         </a>
     </aside>
 
@@ -107,7 +107,7 @@ if ($ticketData) {
                     Sign Out
                 </a>
                 <button class="w-full bg-white cta-btn font-semibold py-2 mt-3 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                    <i class="fas fa-arrow-circle-up mr-3"></i> Upgrade to Pro!
+                    <i class="fas fa-arrow-circle-up mr-3"></i> Khawlita
                 </button>
             </nav>
         </header>
