@@ -63,14 +63,31 @@ $developers = $connection->selectData("developpeur", "First_name, Last_name", ""
                     <li><a href="support.php"
                             class="text-sm text-gray-200 dark:text-gray-300 hover:text-blue-200 dark:hover:text-blue-200">Support</a>
                     </li>
-                    <li><a href=""
-                            class="text-sm text-gray-200 dark:text-gray-300 hover:text-blue-200 dark:hover:text-blue-200">About</a>
+                    <li><a href="profil.php"
+                            class="text-sm text-gray-200 dark:text-gray-300 hover:text-blue-200 dark:hover:text-blue-200">Profil</a>
                     </li>
-                    <li><a href=""
-                            class="text-sm text-gray-200 dark:text-gray-300 hover:text-blue-200 dark:hover:text-blue-200"></a>
+                    <li>
+                        <button><a href="singIn.php"
+                            class="text-sm text-gray-200 dark:text-gray-300 hover:text-blue-200 dark:hover:text-blue-200">Lougot</a>
+                        </button>
                     </li>
 
+        </header>
+
+        <!-- Mobile Header & Nav -->
+        <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
+            <div class="flex items-center justify-between">
+            <a href="index.php"><img src="img/logo H.T.S.png" alt="" class="h-10 w-28"></a>
+                <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
+                    <i x-show="!isOpen" class="fas fa-bars"></i>
+                    <i x-show="isOpen" class="fas fa-times"></i>
+                </button>
+            </div>
+
                 </ul>
+                
+
+                
                 <div class="hidden lg:block">
                     <a href=""
                         class="inline-block px-4 py-3 mr-2 text-xs font-medium leading-none text-gray-100 border border-gray-200 rounded-full dark:text-gray-300 dark:border-gray-400 hover:bg-blue-200 dark:hover:text-gray-700 hover:text-gray-700">
@@ -108,7 +125,6 @@ $developers = $connection->selectData("developpeur", "First_name, Last_name", ""
                     <li class="pb-3">
                         <a href="" class="text-sm text-gray-700 hover:text-blue-400 dark:text-gray-400"></a>
                     </li>
-
                 </ul>
                 <div class="flex items-center mt-5 lg:hidden">
                     <a href=""

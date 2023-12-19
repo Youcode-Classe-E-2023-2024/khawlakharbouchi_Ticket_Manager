@@ -29,9 +29,9 @@
 
         </div>
         <nav class="text-white text-base font-semibold pt-3">
-            <a href="index.html" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+            <a href="profil.php" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
-                Dashboard
+                Profil
             </a>
             <a href="index.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
                 <i class="fas fa-sticky-note mr-3"></i>
@@ -59,9 +59,9 @@
                 </button>
                 <button x-show="isOpen" @click="isOpen = false" class="h-full w-full fixed inset-0 cursor-default"></button>
                 <div x-show="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16">
-                    <a href="#" class="block px-4 py-2 account-link hover:text-white">Account</a>
-                    <a href="#" class="block px-4 py-2 account-link hover:text-white">Support</a>
-                    <a href="#" class="block px-4 py-2 account-link hover:text-white">Sign Out</a>
+                    <a href="profil.php" class="block px-4 py-2 account-link hover:text-white">Account</a>
+                    <a href="support.php" class="block px-4 py-2 account-link hover:text-white">Support</a>
+                    <a href="singIn.php" class="block px-4 py-2 account-link hover:text-white">Sign Out</a>
                 </div>
             </div>
         </header>
@@ -78,9 +78,9 @@
 
             <!-- Dropdown Nav -->
             <nav :class="isOpen ? 'flex': 'hidden'" class="flex flex-col pt-4">
-                <a href="index.php" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
+                <a href="profil.php" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
                     <i class="fas fa-tachometer-alt mr-3"></i>
-                    Dashboard
+                    Profil
                 </a>
                 <a href="support.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-sticky-note mr-3"></i>
@@ -89,11 +89,6 @@
                 <a href="index.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-table mr-3"></i>
                     Home
-                </a>
-
-                <a href="profil.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-                    <i class="fas fa-user mr-3"></i>
-                    My Account
                 </a>
                 <a href="singIn.php" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
                     <i class="fas fa-sign-out-alt mr-3"></i>
