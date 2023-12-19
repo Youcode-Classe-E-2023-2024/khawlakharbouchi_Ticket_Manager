@@ -86,8 +86,7 @@ if ($ticketData) {
                     </a>
                 </nav>
             </div>
-            <div class="flex flex-col flex-1 "> 
-                <!-- 7yedt overflow hidden -->
+            <div class="flex flex-col flex-1 overflow-y-auto"> 
                 <header class="flex items-center justify-between px-6 py-4 bg-white border-b-4 border-indigo-600">
                     <div class="flex items-center">
                         <button @click="sidebarOpen = true" class="text-gray-500 focus:outline-none lg:hidden">
@@ -212,7 +211,7 @@ if ($ticketData) {
                             </div>
                             <div class="flex items-center space-x-8">
                                 <button
-                                    class="rounded-2xl border bg-neutral-100 px-3 py-1 text-xs font-semibold">status</button>
+                                    class="rounded-2xl border bg-neutral-100 px-3 py-1 text-xs font-semibold"><?= $ticket['status'] ?></button>
                                 <div class="text-xs text-neutral-500">
                                     <?= $ticket['Date'] ?>
                                 </div>

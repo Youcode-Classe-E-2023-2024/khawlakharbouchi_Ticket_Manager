@@ -44,22 +44,20 @@ class Conn extends Connection
     public function selectData($table, $columns = "*", $condition)
     {
         try {
-            // echo "wssel";
             $query = "SELECT $columns FROM $table";
     
             if ($condition != null)  {
                 $query .= " WHERE $condition";
             }
-            // echo $query;
+ 
             $result = $this->conn->query($query);
-            // var_dump($result);
-            // imad daz mn hna 
+
             if ($result) {
                 $data = [];
                 while ($row = $result->fetch_assoc()) {
                     $data[] = $row;
                 }
-                // var_dump($data);
+             
                 return $data;
             } else {
                 return false;
