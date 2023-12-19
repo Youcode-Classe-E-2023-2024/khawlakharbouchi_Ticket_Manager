@@ -233,15 +233,16 @@ if ($ticketData) {
             
             <div class="py-12 bg-gray-700 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0" id="modal">
                 <div role="alert" class="container mx-auto w-11/12 md:w-2/3 max-w-lg">
-                    <div class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
-                        <div class="messagecontainer mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full flex-col flex items-center pl-3 text-sm border-gray-300 rounded border">
-                            
-                            
+                    <div class="relative py-8 px-5 over-flow md:px-10 bg-white shadow-md rounded border border-gray-400">
+                        <div class="">
+                    <div class="messagecontainer h-10 mb-8 text-gray-600 focus:outline-none grid gap-x-px grid-cols-2 ">
+                               
                         </div>
+                        
 
-                    <div class="relative mb-5 mt-2">
-                            
+                    <div class="relative mb-5 mt-2">   
                             <input id="message" class="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="MM/YY" />
+                        </div>
                         </div>
                         <div class="flex items-center justify-start w-full">
                             <button onclick="sendmsg()" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm">Submit</button>
@@ -257,18 +258,14 @@ if ($ticketData) {
                     </div>
                 </div>
             </div>
-            <div class="w-full flex justify-center py-12" id="button">
-                <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 mx-auto transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm" onclick="modalHandler(true)">Open Modal</button>
             </div>
-           
-            
         </dh-component>
 
-        <!--  -->
-
-
         </div>
         </div>
+
+
+        
         <script>
                 var globalid ;
                 
@@ -336,7 +333,7 @@ if ($ticketData) {
                         }
                     })();
                 }
-            </script>
+        </script>
 
         <!-- AlpineJS -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
