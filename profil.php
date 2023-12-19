@@ -23,7 +23,7 @@
 </head>
 <body class="bg-gray-100 font-family-karla flex">
 
-    <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
+    <aside class="bg-indigo-500 dark:bg-gray-800 relative  h-screen w-64 hidden sm:block shadow-xl">
         <div class="p-6">
         <a href="index.php"><img src="img/logo H.T.S.png" alt="" class="h-10 w-28"></a>
 
