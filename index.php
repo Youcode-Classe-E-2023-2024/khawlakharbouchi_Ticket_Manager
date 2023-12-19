@@ -234,7 +234,7 @@ if ($ticketData) {
                         
 
                     <div class="relative mb-5 mt-2">   
-                            <input id="message" class="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="MM/YY" />
+                            <input id="message" class="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded-lg border" placeholder="Commentaire" />
                         </div>
                         </div>
                         <div class="flex items-center justify-start w-full">
@@ -415,6 +415,10 @@ if ($ticketData) {
                 }
             });
         </script>
+
+
+
+
     </body>
 
     </html>
