@@ -45,11 +45,11 @@ class Conn extends Connection
     {
         try {
             $query = "SELECT $columns FROM $table";
-    
-            if ($condition != null)  {
+
+            if ($condition != null) {
                 $query .= " WHERE $condition";
             }
- 
+
             $result = $this->conn->query($query);
 
             if ($result) {
@@ -57,7 +57,7 @@ class Conn extends Connection
                 while ($row = $result->fetch_assoc()) {
                     $data[] = $row;
                 }
-             
+
                 return $data;
             } else {
                 return false;
@@ -67,7 +67,7 @@ class Conn extends Connection
             return false;
         }
     }
-    
+
 
 
 }

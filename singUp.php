@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     if ($result == 1) {
         echo "<script>alert('تم التسجيل بنجاح');</script>";
         header("Location: singIn.php");
-        exit(); 
+        exit();
     } else {
         echo "<script>alert('فشل التسجيل، يرجى المحاولة مرة أخرى');</script>";
     }
@@ -263,7 +263,7 @@ if (isset($_POST['submit'])) {
         <div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
         </div>
     </section>
-    
+
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>

@@ -4,7 +4,7 @@ include_once 'class.php';
 $connection = new Conn();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   
+
     $titre = $_POST["titre"];
     $probleme = $_POST["probleme"];
     $status = $_POST["status"];
@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $developpeurs = isset($_POST["dev"]) ? $_POST["dev"] : [];
     $priorite = $_POST["number-input"];
 
-   
+
     $ticket = new Ticket();
 
-  
+
     $ticket->insertFormData($titre, $probleme, $status, $description, $developpeurs, $priorite);
 }
 
@@ -68,26 +68,26 @@ $developers = $connection->selectData("developpeur", "First_name, Last_name", ""
                     </li>
                     <li>
                         <button><a href="singIn.php"
-                            class="text-sm text-gray-200 dark:text-gray-300 hover:text-blue-200 dark:hover:text-blue-200">Lougot</a>
+                                class="text-sm text-gray-200 dark:text-gray-300 hover:text-blue-200 dark:hover:text-blue-200">Lougot</a>
                         </button>
                     </li>
 
-        </header>
+                    </header>
 
-        <!-- Mobile Header & Nav -->
-        <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
-            <div class="flex items-center justify-between">
-            <a href="index.php"><img src="img/logo H.T.S.png" alt="" class="h-10 w-28"></a>
-                <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
-                    <i x-show="!isOpen" class="fas fa-bars"></i>
-                    <i x-show="isOpen" class="fas fa-times"></i>
-                </button>
-            </div>
+                    <!-- Mobile Header & Nav -->
+                    <header x-data="{ isOpen: false }" class="w-full bg-sidebar py-5 px-6 sm:hidden">
+                        <div class="flex items-center justify-between">
+                            <a href="index.php"><img src="img/logo H.T.S.png" alt="" class="h-10 w-28"></a>
+                            <button @click="isOpen = !isOpen" class="text-white text-3xl focus:outline-none">
+                                <i x-show="!isOpen" class="fas fa-bars"></i>
+                                <i x-show="isOpen" class="fas fa-times"></i>
+                            </button>
+                        </div>
 
                 </ul>
-                
 
-                
+
+
                 <div class="hidden lg:block">
                     <a href=""
                         class="inline-block px-4 py-3 mr-2 text-xs font-medium leading-none text-gray-100 border border-gray-200 rounded-full dark:text-gray-300 dark:border-gray-400 hover:bg-blue-200 dark:hover:text-gray-700 hover:text-gray-700">
@@ -171,10 +171,10 @@ $developers = $connection->selectData("developpeur", "First_name, Last_name", ""
                             </label>
                         </div>
                         <div class="w-full p-3 md:flex-1">
-                            <select name="probleme" id="probleme" multiple >
+                            <select name="probleme" id="probleme" multiple>
                                 <option value="Front-end">Front-end</option>
                                 <option value="Back-end">Back-end</option>
-                        
+
                             </select>
                         </div>
                     </div>
@@ -192,7 +192,8 @@ $developers = $connection->selectData("developpeur", "First_name, Last_name", ""
                             </label>
                         </div>
                         <div class="w-full p-3 md:flex-1">
-                        <select id="status" name="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <select id="status" name="status"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="Done">Done</option>
                                 <option value="in progress">in progress</option>
                                 <option value="to do">to do</option>
@@ -211,7 +212,7 @@ $developers = $connection->selectData("developpeur", "First_name, Last_name", ""
                             <p class="text-lg font-mono text-gray-800 dark:text-gray-400">description</p>
                         </div>
                         <div class="w-full p-3 md:flex-1">
-                            <textarea name="description"  rows="4" type="message" placeholder="your text here.." required
+                            <textarea name="description" rows="4" type="message" placeholder="your text here.." required
                                 class="block w-full px-4 py-4 leading-tight placeholder-gray-400 border rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800 "></textarea>
                         </div>
                     </div>
@@ -251,7 +252,8 @@ $developers = $connection->selectData("developpeur", "First_name, Last_name", ""
                             <p class="text-lg font-mono text-gray-800 dark:text-gray-400">priorité</p>
                         </div>
                         <div class="w-full p-3 md:flex-1">
-                            <input name="number-input" rows="4" type="number" aria-describedby="helper-text-explanation" placeholder="entrer number" required
+                            <input name="number-input" rows="4" type="number" aria-describedby="helper-text-explanation"
+                                placeholder="entrer number" required
                                 class="block w-full px-3 py-3 leading-tight placeholder-gray-400 border rounded dark:placeholder-gray-500 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-800 rounded-lg "></input>
                         </div>
                     </div>
