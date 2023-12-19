@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ticket->insertFormData($titre, $probleme, $status, $description, $developpeurs, $priorite);
 }
 
-$developers = $connection->selectData("developpeur", "First_name, Last_name");
+$developers = $connection->selectData("developpeur", "First_name, Last_name", "");
 
 ?>
 
