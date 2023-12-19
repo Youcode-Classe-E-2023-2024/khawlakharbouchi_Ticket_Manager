@@ -176,7 +176,7 @@ if ($ticketData) {
                             <button @click="dropdownOpen = ! dropdownOpen"
                                 class="relative block w-8 h-8 overflow-hidden rounded-full shadow focus:outline-none">
                                 <img class="object-cover w-full h-full"
-                                    src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=296&amp;q=80"
+                                    src="img/profil.png"
                                     alt="Your avatar">
                             </button>
 
@@ -186,9 +186,9 @@ if ($ticketData) {
                             <div x-show="dropdownOpen"
                                 class="absolute right-0 z-10 w-48 mt-2 overflow-hidden bg-white rounded-md shadow-xl"
                                 style="display: none;">
-                                <a href="#"
+                                <a href="profil.php"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Profile</a>
-                                <a href="#"
+                                <a href="singIn.php"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Logout</a>
                             </div>
                         </div>
@@ -203,7 +203,7 @@ if ($ticketData) {
                         <div class="flex w-full items-center justify-between border-b pb-3">
                             <div class="flex items-center space-x-3">
                                 <div class="h-8 w-8 rounded-full bg-slate-400 ">
-                                    <img src="img/profil.png" alt="profil">
+                                    <img src="img/issue.png" alt="profil">
                                 </div>
                                 <div class="text-lg font-bold text-slate-700">
                                     <?= $ticket['developpeur'] ?>
