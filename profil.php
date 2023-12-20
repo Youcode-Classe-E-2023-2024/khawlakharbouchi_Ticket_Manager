@@ -132,7 +132,7 @@
                 </button>
             </nav>
         </header>
-
+<!-- end navbar -->
         <div class="w-full overflow-x-hidden border-t flex flex-col">
             <main class="w-full flex-grow p-6">
 
@@ -145,10 +145,10 @@
                         <table class="min-w-full bg-white">
                             <thead class="bg-gray-800 text-white">
                                 <tr>
-                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Name</th>
-                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Last name</th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Phone</th>
-                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Email</th>
+                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">developpeur</th>
+                                    <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">id ticket</th>
+                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">status</th>
+                                    <th class="text-left py-3 px-4 uppercase font-semibold text-sm">action</th>
                                 </tr>
                             </thead>
                             <tbody class="text-gray-700">
@@ -157,65 +157,62 @@
                                     <td class="w-1/3 text-left py-3 px-4">Smith</td>
                                     <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
                                             href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                            href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                    <td class="text-left py-3 px-4">
+                                    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Edit</button>
+<button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
+                                           </td>
                                 </tr>
                                 <tr class="bg-gray-200">
                                     <td class="w-1/3 text-left py-3 px-4">Emma</td>
                                     <td class="w-1/3 text-left py-3 px-4">Johnson</td>
                                     <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
                                             href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                            href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                            <td class="text-left py-3 px-4">
+                                    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Edit</button>
+<button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
+                                           </td>
                                 </tr>
                                 <tr>
                                     <td class="w-1/3 text-left py-3 px-4">Oliver</td>
                                     <td class="w-1/3 text-left py-3 px-4">Williams</td>
                                     <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
                                             href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                            href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                            <td class="text-left py-3 px-4">
+                                    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Edit</button>
+<button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
+                                           </td>
                                 </tr>
                                 <tr class="bg-gray-200">
                                     <td class="w-1/3 text-left py-3 px-4">Isabella</td>
                                     <td class="w-1/3 text-left py-3 px-4">Brown</td>
                                     <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
                                             href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                            href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                            <td class="text-left py-3 px-4">
+                                    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Edit</button>
+<button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
+                                           </td>
                                 </tr>
                                 <tr>
                                     <td class="w-1/3 text-left py-3 px-4">Lian</td>
                                     <td class="w-1/3 text-left py-3 px-4">Smith</td>
                                     <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
                                             href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                            href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                            <td class="text-left py-3 px-4">
+                                    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Edit</button>
+<button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
+                                           </td>
                                 </tr>
                                 <tr class="bg-gray-200">
                                     <td class="w-1/3 text-left py-3 px-4">Emma</td>
                                     <td class="w-1/3 text-left py-3 px-4">Johnson</td>
                                     <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
                                             href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                            href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
+                                            <td class="text-left py-3 px-4">
+                                    <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Edit</button>
+<button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
+                                           </td>
                                 </tr>
-                                <tr>
-                                    <td class="w-1/3 text-left py-3 px-4">Oliver</td>
-                                    <td class="w-1/3 text-left py-3 px-4">Williams</td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                            href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                            href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                </tr>
-                                <tr class="bg-gray-200">
-                                    <td class="w-1/3 text-left py-3 px-4">Isabella</td>
-                                    <td class="w-1/3 text-left py-3 px-4">Brown</td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                            href="tel:622322662">622322662</a></td>
-                                    <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                            href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>

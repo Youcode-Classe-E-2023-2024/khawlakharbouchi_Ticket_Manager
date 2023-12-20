@@ -229,10 +229,10 @@ if ($ticketData) {
                 id="modal">
                 <div role="alert" class="container mx-auto w-11/12 md:w-2/3 max-w-lg">
                     <div
-                        class="relative py-8 px-5 over-flow md:px-10 bg-white shadow-md rounded border border-gray-400">
-                        <div class="">
+                        class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
+                        
                             <div
-                                class="messagecontainer h-10 mb-8 text-gray-600 focus:outline-none grid gap-x-px grid-cols-2 ">
+                                class=" messagecontainer px-auto h-60 border-2 border-gray-300 overflow-y-auto mb-8 text-gray-600 focus:outline-none">
 
                             </div>
 
@@ -242,7 +242,7 @@ if ($ticketData) {
                                     class="mb-8 text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded-lg border"
                                     placeholder="Commentaire" />
                             </div>
-                        </div>
+                       
                         <div class="flex items-center justify-start w-full">
                             <button onclick="sendmsg()"
                                 class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm">Submit</button>
@@ -275,14 +275,27 @@ if ($ticketData) {
     <script>
         var globalid;
 
+            
+        function loadscreen(id) {
+            var ajaxjdida = new XMLHttpRequest();
+            ajaxjdida.open("GET", "respnose.php?id=" + id, true);
+            ajaxjdida.onreadystatechange = () => {
+                if (ajaxjdida.status === 200) {
+                    document.querySelector(".messagecontainer").innerHTML = ajaxjdida.responseText;
 
+                }
+            }
+            ajaxjdida.send()
+        }
 
         function showmessages(element) {
+            console.log("hi")
+            localStorage.setItem("imad",element.getAttribute("key"));
             var idtickkket = element.getAttribute("key");
             console.log(idtickkket);
             globalid = idtickkket;
             document.querySelector("dh-component").classList.remove("hidden");
-
+        
             var ajaxjdida = new XMLHttpRequest();
             ajaxjdida.open("GET", "respnose.php?id=" + idtickkket, true);
             ajaxjdida.onreadystatechange = () => {
@@ -294,13 +307,14 @@ if ($ticketData) {
             ajaxjdida.send()
         }
         var message = document.getElementById("message");
-        function sendmsg() {
+        function sendmsg(event) {
             if (message.value != "") {
                 var khawla = new XMLHttpRequest();
                 khawla.open("POST", "savemessage.php", true)
                 khawla.onreadystatechange = () => {
-                    window.location.reload();
-
+                    // window.location.reload();
+                    loadscreen(localStorage.getItem("imad"));
+                    message.value = "";
                 }
                 var data = {
                     "message": message.value,
@@ -311,11 +325,7 @@ if ($ticketData) {
         }
         let modal = document.getElementById("modal");
         function modalHandler(val) {
-            if (val) {
-                fadeIn(modal);
-            } else {
-                fadeOut(modal);
-            }
+            document.querySelector("dh-component").classList.add("hidden");
         }
         function fadeOut(el) {
             el.style.opacity = 1;
@@ -340,7 +350,7 @@ if ($ticketData) {
         }
     </script>
 
-    <!-- AlpineJS -->
+        <!-- AlpineJS -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <!-- Font Awesome -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
@@ -429,7 +439,6 @@ if ($ticketData) {
         </script>
 
     </body>
-
     </html>
     <?php
 } else {
